@@ -5,6 +5,8 @@ The code is being released soon!
 
 [<a href="https://wanluzhu.github.io/"><strong>Project Page</strong></a>]
 
+![model](https://wanluzhu.github.io/resources/pipline.jpg)
+
 # Citation
 ```
 ```
