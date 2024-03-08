@@ -5,6 +5,7 @@ The code is being released soon!
 
 [<a href="https://wanluzhu.github.io/TCDiffusion/"><strong>Project Page</strong></a>]
 
+![model](Fig/Pipline.jpg)
 
 # Citation
 ```
