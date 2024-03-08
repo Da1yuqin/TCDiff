@@ -3,7 +3,7 @@ This is the official code for our paper: "Harmonious Group Choreography with Tra
 
 The code is being released soon!
 
-[<a href="https://wanluzhu.github.io/"><strong>Project Page</strong></a>]
+[<a href="https://wanluzhu.github.io/TCDiffusion/"><strong>Project Page</strong></a>]
 
 
 # Citation
