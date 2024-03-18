@@ -14,5 +14,10 @@ Subsequently, TCDiff utilizes this result for conditional diffusion to generate 
 
 # Citation
 ```
-Dai, Y., Zhu, W., Li, R., Ren, Z., Zhou, X., Li, X., ... & Yang, J. (2024). Harmonious Group Choreography with Trajectory-Controllable Diffusion. arXiv preprint arXiv:2403.06189.
+@article{dai2024harmonious,
+  title={Harmonious Group Choreography with Trajectory-Controllable Diffusion},
+  author={Dai, Yuqin and Zhu, Wanlu and Li, Ronghui and Ren, Zeping and Zhou, Xiangzheng and Li, Xiu and Li, Jun and Yang, Jian},
+  journal={arXiv preprint arXiv:2403.06189},
+  year={2024}
+}
 ```
