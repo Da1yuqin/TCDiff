@@ -3,12 +3,10 @@ This is the official code for our paper: "Harmonious Group Choreography with Tra
 
 The code is being released soon!
 
-[<a href="https://wanluzhu.github.io/TCDiffusion/"><strong>Project Page</strong></a>]
+[<a href="https://da1yuqin.github.io/TCDiffpp.website/"><strong>Project Page</strong></a>]
 
 ![model](Fig/Pipline.jpg)
-Our framework consists of two main components: the Dance-Beat Navigator (DBN) and Trajectory-Controllable Diffusion (TCDiff). 
-To address dancer ambiguity, initially, we employ DBN to model dancer positions, as dancers' coordinates exhibit distinct differences and are less prone to confusion.
-Subsequently, TCDiff utilizes this result for conditional diffusion to generate corresponding dance movements. During this process, a fusion projection enhances group information before inputting it into the multi-dance transformer, while a footwork adaptor adjusts the final footwork.
+Our end-to-end TCDiff++ framework comprises two key components: the Group Dance Decoder (GDD) and the Footwork Adaptor (FA). The GDD initially generates a raw motion sequence without trajectory overlap based on the given music. Subsequently, the FA refines the foot movements by leveraging the positional information of the raw motion, producing an adapted motion with improved footstep actions to reduce foot sliding. Finally, the adapted footstep movements are incorporated into the raw motion, yielding a harmonious dance sequence with stable footwork and fewer dancer collisions.
 
 
 
