@@ -9,7 +9,7 @@ def parse_train_opt():
     parser.add_argument("--exp_name", default="exp")
     
     ### dataset ###
-    parser.add_argument("--data_path", type=str, default="/opt/data/private/project3-Dancepartner/0-dataset/dataProcess/",
+    parser.add_argument("--data_path", type=str, default="./data/AIOZ_Dataset/",
             help="Path to raw dataset folder (must contain train/test subfolders). Do not modify unless necessary.")
     parser.add_argument("--processed_data_dir",type=str, 
                         default="./data/dataset_backups/", help="Dataset backup path") 
@@ -50,7 +50,7 @@ def parse_train_opt():
     parser.add_argument("--ema_interval", type=int, default=1, help="ema every x steps")
     parser.add_argument(
         "--checkpoint", type=str, 
-        default = "/opt/data/private/IJCV/opensource/TCDiff_debug/runs/train/exp/weights/train-550.pt",
+        default = "",
         help="trained checkpoint path (optional)"
     )
 
