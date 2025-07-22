@@ -6,7 +6,7 @@ def get_args_parser():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     
     ## Data
-    parser.add_argument("--data_path", type=str, default="/opt/data/private/project3-Dancepartner/0-dataset/dataProcess/", help="Path to raw data directory containing train/test folders.") 
+    parser.add_argument("--data_path", type=str, default="./data/AIOZ_Dataset/", help="Path to raw data directory containing train/test folders.") 
     parser.add_argument("--processed_data_dir",type=str, 
                         default="./data/dataset_backups/", help="Path to save/load preprocessed dataset backups.") 
     parser.add_argument( 
@@ -20,7 +20,10 @@ def get_args_parser():
     )
 
     ## Checkpoint paths
-    parser.add_argument("--checkpoint", type=str,  default = "/opt/data/private/IJCV/opensource/TCDiff_debug/TrajDecoder/log/exp_debug/ckpt/epoch-79000.pth",) # Resume path
+    parser.add_argument("--checkpoint", type=str,  
+    # default = "./log/exp_debug/ckpt/epoch-79000.pth",\
+    default = None,
+    ) # Resume path
     parser.add_argument("--ckpt_dir", type=str, default="./log/exp_debug/ckpt/", help="Directory to save model checkpoints.") # Saving path
 
 
