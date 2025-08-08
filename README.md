@@ -118,6 +118,28 @@ We developed automated scripts to transform the generated SMPL motion data into 
 The concept of TCDiff is inspired by solo-dancer generation model [EDGE](https://github.com/Stanford-TML/EDGE).
 We sincerely appreciate the efforts of these teams for their contributions to open-source research and development.
 
+## Contributing
+Heartfelt thanks to these amazing contributors for making this project shine! 💡💪🌟
+<table>
+  <tbody>
+    <tr>
+    <td align="center" width="150">
+        <a href="https://github.com/wanluzhu">
+          <img src="https://wsrv.nl/?url=avatars.githubusercontent.com/u/87316742?v=4&mask=circle&w=100&h=100" alt="Wanlu Zhu">
+        </a>
+        <div><strong>Wanlu Zhu</strong></div>
+        <div>🏸💧🐈‍⬛</div>
+      <td align="center" width="150">
+        <a href="https://github.com/Da1yuqin">
+          <img src="https://wsrv.nl/?url=avatars.githubusercontent.com/u/139312004?v=4&mask=circle&w=100&h=100" alt="Yuqin Dai">
+        </a>
+        <div><strong>Yuqin Dai</strong></div>
+        <div>🐶❤😎</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 # Citation
 We present [TCDiff++](https://github.com/Da1yuqin/TCDiffpp), an end-to-end extension of TCDiff with improved long-term generation performance and simplified training (also converges faster). Stay tuned!
