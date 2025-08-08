@@ -10,23 +10,20 @@ def parse_train_opt():
     
     ### dataset ###
     parser.add_argument("--data_path", type=str, 
-            # default="./data/AIOZ_Dataset/", # FIXME:
-            default="/opt/data/private/project3-Dancepartner/0-dataset/dataProcess/",
+            default="./data/AIOZ_Dataset/", 
             help="Path to raw dataset folder (must contain train/test subfolders). Do not modify unless necessary.")
     parser.add_argument("--processed_data_dir",type=str, 
                         default="./data/dataset_backups/", help="Dataset backup path") 
-    parser.add_argument("--batch_size", type=int, default=45) # FIXME: 4: 37 5:20
+    parser.add_argument("--batch_size", type=int, default=37) 
     parser.add_argument("--window_size", type=int, default=150, help="window size")
-    parser.add_argument( # FIXME: False
-        "--force_reload", default = True, action="store_true", help="Force reprocessing of the dataset, ignoring cached data."
+    parser.add_argument( 
+        "--force_reload", default = False, action="store_true", help="Force reprocessing of the dataset, ignoring cached data."
     )
 
-    # FIXME: False
-    parser.add_argument("--no_cache", action="store_true", default = True, help="Disable dataset caching; always reload from disk.")
+    parser.add_argument("--no_cache", action="store_true", default = False, help="Disable dataset caching; always reload from disk.")
         
-        # change dancer_num # FIXME: 4
     parser.add_argument(
-        "--required_dancer_num", type = int, default=3, help="Number of dancers required in each sample."
+        "--required_dancer_num", type = int, default=4, help="Number of dancers required in each sample."
     )
 
 
@@ -54,7 +51,7 @@ def parse_train_opt():
     parser.add_argument("--ema_interval", type=int, default=1, help="ema every x steps")
     parser.add_argument(
         "--checkpoint", type=str, 
-        default = "", # FIXME:
+        default = "", 
         help="trained checkpoint path (optional)"
     )
 
