@@ -119,7 +119,7 @@ The concept of TCDiff is inspired by solo-dancer generation model [EDGE](https:/
 We sincerely appreciate the efforts of these teams for their contributions to open-source research and development.
 
 ## Contributing
-Heartfelt thanks to my amazing contributors for making this project shine! 💡💪🌟
+Heartfelt thanks to my amazing collaborator for making this project shine! 💡💪🌟
 <table>
   <tbody>
     <tr>
