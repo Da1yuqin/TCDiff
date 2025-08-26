@@ -1,15 +1,35 @@
 # Harmonious Group Choreography with Trajectory-Controllable Diffusion
 Code for AAAI 2025 (oral) paper "Harmonious Group Choreography with Trajectory-Controllable Diffusion"
 
-If you find this project useful, a ⭐️ would make our day!
+<!-- [<a href="https://wanluzhu.github.io/TCDiffusion/"><strong>Project Page</strong></a>]
+[<a href="https://arxiv.org/pdf/2403.06189"><strong>Paper</strong></a>] -->
 
-[<a href="https://wanluzhu.github.io/TCDiffusion/"><strong>Project Page</strong></a>]
-[<a href="https://arxiv.org/pdf/2403.06189"><strong>Paper</strong></a>]
-
-![model](assets/Pipline.jpg)
+<!-- ![model](assets/Pipline.jpg)
 Our framework consists of two main components: the Dance-Beat Navigator (DBN) and Trajectory-Controllable Diffusion (TCDiff). 
 To address dancer ambiguity, initially, we employ DBN to model dancer positions, as dancers' coordinates exhibit distinct differences and are less prone to confusion.
-Subsequently, TCDiff utilizes this result for conditional diffusion to generate corresponding dance movements. During this process, a fusion projection enhances group information before inputting it into the multi-dance transformer, while a footwork adaptor adjusts the final footwork.
+Subsequently, TCDiff utilizes this result for conditional diffusion to generate corresponding dance movements. During this process, a fusion projection enhances group information before inputting it into the multi-dance transformer, while a footwork adaptor adjusts the final footwork. -->
+
+<p align="center">
+  <em>✨ If you find this project useful, a ⭐️ would make our day! ✨.</em>
+</p>
+
+<p align="center">
+  <img height="260" src="assets/sample.gif" />
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/pdf/2403.06189">
+    <img src="https://img.shields.io/badge/Paper-blue?style=for-the-badge"/>
+  </a>
+  <a href="https://wanluzhu.github.io/TCDiffusion/">
+    <img src="https://img.shields.io/badge/Project Page-green?style=for-the-badge"/>
+  </a>
+  <a href="https://da1yuqin.github.io/TCDiffpp.website/">
+    <img src="https://img.shields.io/badge/Extension:TCDiff++-purple?style=for-the-badge"/>
+  </a>
+</p>
+
+
 
 
 ## Environment Setup

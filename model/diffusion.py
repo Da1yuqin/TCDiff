@@ -370,13 +370,13 @@ class GaussianDiffusion(nn.Module):
             # Loop over the selected footsteps indices (each corresponds to a segment of rotation data)
             for i in [1,2,3,4,5,7,8,10,11]:
                 # Interpolate the start segment (smooth transition from original x to x_0)
-                x[:, 75:75 + width, :,4+3+(i-1)*6:4+3+i*6] = weights * x_0[:,75:75 + width, :,4+3+(i-1)*6:4+3+i*6] + (1-weights) * x[:, 75:75 + width, :,4+3+(i-1)*6:4+3+i*6] # 开头 (直白来说, 特地留个中文)
+                x[:, 75:75 + width, :,4+3+(i-1)*6:4+3+i*6] = weights * x_0[:,75:75 + width, :,4+3+(i-1)*6:4+3+i*6] + (1-weights) * x[:, 75:75 + width, :,4+3+(i-1)*6:4+3+i*6] 
 
                 # Fully replace the middle segment with values from x_0
-                x[:, 75 + width : -width, :,4+3+(i-1)*6:4+3+i*6] = x_0[:,75 + width : -width,:,4+3+(i-1)*6:4+3+i*6] # 中间
+                x[:, 75 + width : -width, :,4+3+(i-1)*6:4+3+i*6] = x_0[:,75 + width : -width,:,4+3+(i-1)*6:4+3+i*6] 
 
                 # Interpolate the end segment (smooth transition back to original x)
-                x[:, 120-width:120,:,4+3+(i-1)*6:4+3+i*6] = (1-weights) * x_0[:,120-width:120,:,4+3+(i-1)*6:4+3+i*6] + weights * x[:, 120-width:120,:,4+3+(i-1)*6:4+3+i*6] # 结尾
+                x[:, 120-width:120,:,4+3+(i-1)*6:4+3+i*6] = (1-weights) * x_0[:,120-width:120,:,4+3+(i-1)*6:4+3+i*6] + weights * x[:, 120-width:120,:,4+3+(i-1)*6:4+3+i*6] 
 
             x = x.reshape(-1, seq*dn, c)
 

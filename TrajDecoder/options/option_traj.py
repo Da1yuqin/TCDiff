@@ -7,8 +7,7 @@ def get_args_parser():
     
     ## Data
     parser.add_argument("--data_path", type=str, 
-                        # default="./data/AIOZ_Dataset/", # FIXME:
-                        default="/opt/data/private/project3-Dancepartner/0-dataset/dataProcess/", 
+                        default="./data/AIOZ_Dataset/", 
                         help="Path to raw data directory containing train/test folders.") 
     parser.add_argument("--processed_data_dir",type=str, default="./data/dataset_backups/", help="Path to save/load preprocessed dataset backups.") 
     parser.add_argument( 
@@ -17,15 +16,14 @@ def get_args_parser():
     parser.add_argument("--no_cache", action="store_true", default=False, help="Disable dataset caching and always load from scratch.")
 
     ## dancer_num ###
-    parser.add_argument( # FIXME: 4
-        "--required_dancer_num", type = int, default=5, help="Number of dancers required in each sample."
+    parser.add_argument( 
+        "--required_dancer_num", type = int, default=4, help="Number of dancers required in each sample."
     )
 
     ## Checkpoint paths
     parser.add_argument("--checkpoint", type=str,  
-    # default = "./log/exp_debug/ckpt/epoch-79000.pth",\ # FIXME: 这两行
-    # default = None,
-    default = "/opt/data/private/IJCV/opensource/TCDiff/TrajDecoder/log/exp_debug/ckpt/epoch-370000.pth",
+    # default = "./log/exp_debug/ckpt/epoch-79000.pth",\ 
+    default = None,
     ) # Resume path
     parser.add_argument("--ckpt_dir", type=str, default="./log/exp_debug/ckpt/", help="Directory to save model checkpoints.") # Saving path
 

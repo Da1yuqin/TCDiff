@@ -212,7 +212,7 @@ def plot_single_pose(num, poses, lines, ax, axrange, scat, contact):
     if num == 0:
         if isinstance(axrange, int):
             axrange = (axrange, axrange, axrange)
-        xcenter, ycenter, zcenter = 2.5, 3.5, 2.5  # EDGE-processed test setting
+        xcenter, ycenter, zcenter = 2.5, 3.5, 2.5 
         stepx, stepy, stepz = axrange[0] / 2, axrange[1] / 2, axrange[2] / 2
 
         ax.set_xlim(xcenter - stepx, xcenter + stepx)

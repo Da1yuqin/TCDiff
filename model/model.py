@@ -22,9 +22,6 @@ class ConcatSquashLinear(Module):
     def forward(self, ctx, x):
         gate = torch.sigmoid(self._hyper_gate(ctx))
         bias = self._hyper_bias(ctx)
-        # if x.dim() == 3: # solo dancer
-        #     gate = gate.unsqueeze(1)
-        #     bias = bias.unsqueeze(1)
         ret = self._layer(x) * gate + bias
         return ret
 
@@ -83,7 +80,7 @@ class SBI_MSA(nn.Module):
         v = self.w_vs(value).view(sz_b, len_v, n_head, d_v).transpose(1, 2) 
 
         query_emb = shared_emb.view(1, 10, n_head, d_k).transpose(1, 2) 
-        indexed_matrix = torch.matmul(q, query_emb.transpose(2, 3)) # (sz_b, n_head, len_q, d_q) · (1, n_head, d_k, 10) -> (1, n_head, len_k, 10)    
+        indexed_matrix = torch.matmul(q, query_emb.transpose(2, 3)) 
         # Shape: (sz_b, n_head, len_q, 10)
         # Equivalent to performing an embedding lookup using q as input
 
@@ -338,7 +335,7 @@ class FiLMTransformerDecoderLayer(nn.Module):
 
             # --- Feedforward block ---
             # Apply LayerNorm → feedforward → FiLM modulation → residual connection
-            x_3 = self._ff_block(self.norm3(x)) # mlp, 两层线性层 + dropout
+            x_3 = self._ff_block(self.norm3(x)) # mlp + dropout
             x = x + featurewise_affine(x_3, self.film3(t)) 
 
             # --- Additional trajectory-based modulation ---
